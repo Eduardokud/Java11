@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 
 public class FilmManagerTest {
 
-    PurchaseItem film1 = new PurchaseItem(1, "Бладшот");
-    PurchaseItem film2 = new PurchaseItem(2, "Вперёд");
-    PurchaseItem film3 = new PurchaseItem(3, "Отель <<Белград>> ");
-    PurchaseItem film4 = new PurchaseItem(4, "Джентльиены");
-    PurchaseItem film5 = new PurchaseItem(5, "Человек - невидимка");
-    PurchaseItem film6 = new PurchaseItem(6, "Тролли.Мировой тур");
-    PurchaseItem film7 = new PurchaseItem(7, "Номер один");
+    PosterItem film1 = new PosterItem(1, "Бладшот");
+    PosterItem film2 = new PosterItem(2, "Вперёд");
+    PosterItem film3 = new PosterItem(3, "Отель <<Белград>> ");
+    PosterItem film4 = new PosterItem(4, "Джентльиены");
+    PosterItem film5 = new PosterItem(5, "Человек - невидимка");
+    PosterItem film6 = new PosterItem(6, "Тролли.Мировой тур");
+    PosterItem film7 = new PosterItem(7, "Номер один");
 
     @Test
     public void addnewFilm() {
@@ -23,8 +23,8 @@ public class FilmManagerTest {
         manager.addNewFilm(film5);
         manager.addNewFilm(film6);
         manager.addNewFilm(film7);
-        PurchaseItem[] expected = {film1, film2, film3, film4, film5, film6, film7};
-        PurchaseItem[] actual = manager.findAll();
+        PosterItem[] expected = {film1, film2, film3, film4, film5, film6, film7};
+        PosterItem[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
 
 
@@ -40,8 +40,8 @@ public class FilmManagerTest {
         manager.addNewFilm(film5);
         manager.addNewFilm(film6);
         manager.addNewFilm(film7);
-        PurchaseItem[] expected = {film7, film6, film5, film4, film3, film2, film1};
-        PurchaseItem[] actual = manager.findLast();
+        PosterItem[] expected = {film7, film6, film5, film4, film3, film2, film1};
+        PosterItem[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
 
     }
@@ -56,8 +56,8 @@ public class FilmManagerTest {
         manager.addNewFilm(film5);
         manager.addNewFilm(film6);
         manager.addNewFilm(film7);
-        PurchaseItem[] expected = {film4, film3, film2, film1};
-        PurchaseItem[] actual = manager.findLast(4);
+        PosterItem[] expected = {film4, film3, film2, film1};
+        PosterItem[] actual = manager.findLast(4);
         Assertions.assertArrayEquals(expected, actual);
 
     }
