@@ -48,7 +48,7 @@ public class FilmManagerTest {
 
     @Test
     public void findLastNoDefaultLength() {
-        FilmManager manager = new FilmManager();
+        FilmManager manager = new FilmManager(4);
         manager.addNewFilm(film1);
         manager.addNewFilm(film2);
         manager.addNewFilm(film3);
@@ -57,7 +57,7 @@ public class FilmManagerTest {
         manager.addNewFilm(film6);
         manager.addNewFilm(film7);
         PosterItem[] expected = {film4, film3, film2, film1};
-        PosterItem[] actual = manager.findLast(4);
+        PosterItem[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
 
     }
